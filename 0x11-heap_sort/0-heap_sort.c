@@ -19,9 +19,7 @@ void _swap(int *array, int i, int j, const int r_size)
 		array[i] = array[j];
 		array[j] = tmp;
 		print_array(array, (size_t)r_size);
-		
 	}
-	
 }
 
 /**
@@ -48,9 +46,7 @@ void _largest(int *array, size_t size, int i, const int r_size)
 	{
 		_swap(array, i, largest, r_size);
 		_largest(array, size, largest, r_size);
-		
 	}
-	
 }
 
 /**
@@ -66,15 +62,11 @@ void heap_sort(int *array, size_t size)
 
 	if (size < 2 || !array)
 		return;
-
 	for (i = size / 2 - 1; i >= 0; i--)
 		_largest(array, size, i, r_size);
-
 	for (i = size - 1; i >= 0; i--)
 	{
 		_swap(array, 0, i, r_size);
 		_largest(array, i, 0, r_size);
-		
 	}
-	
 }
