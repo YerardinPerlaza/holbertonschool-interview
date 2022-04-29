@@ -16,7 +16,6 @@ void print_arrayAd(int *array, int min, int max)
 		printf("%d, ", array[i]);
 
 	printf("%d\n", array[i]);
-	
 }
 /**
  * auxBinary - searches for a value in a sorted array of integers
@@ -52,7 +51,6 @@ int auxBinary(int *array, int min, int max, int value)
 	if (array[mid] >= value)
 		return (auxBinary(array, min, mid, value));
 	return (auxBinary(array, mid + 1, max, value));
-	
 }
 /**
  * advanced_binary - searches for a value in a sorted array of integers
@@ -70,5 +68,4 @@ int advanced_binary(int *array, size_t size, int value)
 		return (-1);
 
 	return (auxBinary(array, 0, size - 1, value));
-	
 }
