@@ -17,7 +17,6 @@ void copy(int *src, int *dst, int size)
 
 	for (i = 0; i < size; i++)
 		dst[i] = src[i];
-	
 }
 /**
  * merge - merges two sets of data in ascending order
@@ -47,7 +46,6 @@ void merge(int *array, int *buff, int minL, int maxL, int minR, int maxR)
 			array[k] = buff[j], k++, j++;
 		else
 			array[k] = buff[i], k++, i++;
-	
 }
 /**
  * printcheck - prints an array in a given range
@@ -67,10 +65,8 @@ void printcheck(int *array, int r1, int r2)
 		if (i > r1)
 			printf(", ");
 		printf("%d", array[i]);
-		
 	}
 	printf("\n");
-	
 }
 /**
  * split - recursive function to split data into merge tree
@@ -120,7 +116,6 @@ void split(int *array, int *buff, int min, int max, int size)
 
 	printf("[Done]: ");
 	printcheck(array, minL, maxR);
-	
 }
 /**
  * merge_sort - sorts an array of integers in ascending order
@@ -147,5 +142,4 @@ void merge_sort(int *array, size_t size)
 	split(array, buff, 0, size - 1, size);
 
 	free(buff);
-	
 }
