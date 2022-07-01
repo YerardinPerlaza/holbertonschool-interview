@@ -27,7 +27,6 @@ List *add_node_end(List **list, char *str)
 	{
 		free(new_node);
 		return (NULL);
-		
 	}
 	new_node->str = strNode;
 
@@ -37,9 +36,7 @@ List *add_node_end(List **list, char *str)
 		new_node->prev = new_node;
 		*list = new_node;
 		return (new_node);
-		
 	}
-
 	new_node->next = *list;
 	new_node->prev = (*list)->prev;
 
@@ -47,7 +44,6 @@ List *add_node_end(List **list, char *str)
 	new_node->prev->next = new_node;
 
 	return (new_node);
-	
 }
 /**
  * add_node_begin - Adds a new node to the beginning of a
@@ -74,7 +70,6 @@ List *add_node_begin(List **list, char *str)
 	{
 		free(new_node);
 		return (NULL);
-		
 	}
 	new_node->str = strNode;
 
@@ -85,17 +80,14 @@ List *add_node_begin(List **list, char *str)
 		(*list)->prev = new_node;
 		if (new_node->prev)
 			new_node->prev->next = new_node;
-		
 	}
 	else
 	{
 		new_node->prev = new_node;
 		new_node->next = new_node;
-		
 	}
 
 	*list = new_node;
 
 	return (new_node);
-	
 }
