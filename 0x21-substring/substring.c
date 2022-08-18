@@ -46,20 +46,15 @@ int *find_substring(char const *s, char const **words, int nb_words, int *n)
 				{
 					*(matched + k) = 1;
 					break;
-					
 				}
-				
 			}
 			if (k == nb_words)
 				break;
-			
 		}
 		if (j == nb_words)
 			*(index_array + count) = i, count += 1;
-		
 	}
 	free(matched);
 	*n = count;
 	return (index_array);
-	
 }
